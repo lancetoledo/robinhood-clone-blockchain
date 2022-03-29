@@ -94,29 +94,29 @@ export default function Home() {
   )
 }
 
-export const getStaticProps = async () => {
-  const options = {
-    method: 'GET',
-    url: 'https://coinranking1.p.rapidapi.com/coins',
-    params: {
-      referenceCurrencyUuid: 'yhjMzLPhuIDl',
-      timePeriod: '24h',
-      tiers: '1',
-      orderBy: 'marketCap',
-      orderDirection: 'desc',
-      limit: '50',
-      offset: '0',
-    },
-    headers: {
-      'x-rapidapi-host': "coinranking1.p.rapidapi.com",
-      'x-rapidapi-key': 'e2f048bb35mshf9e09c6a310b5afp1af80fjsnc733cb0244cc',
-    },
-  }
+// export const getStaticProps = async () => {
+//   const options = {
+//     method: 'GET',
+//     url: 'https://coinranking1.p.rapidapi.com/coins',
+//     params: {
+//       referenceCurrencyUuid: 'yhjMzLPhuIDl',
+//       timePeriod: '24h',
+//       tiers: '1',
+//       orderBy: 'marketCap',
+//       orderDirection: 'desc',
+//       limit: '50',
+//       offset: '0',
+//     },
+//     headers: {
+//       'x-rapidapi-host': "coinranking1.p.rapidapi.com",
+//       'x-rapidapi-key': 'e2f048bb35mshf9e09c6a310b5afp1af80fjsnc733cb0244cc',
+//     },
+//   }
 
-  const res = await axios.request(options)
-  const coins = res.data.data.coins
+//   const res = await axios.request(options)
+//   const coins = res.data.data.coins
 
-  return {
-    props: { coins },
-  }
-}  
+//   return {
+//     props: { coins },
+//   }
+// }  
